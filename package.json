@@ -1,5 +1,5 @@
 {
-  "name": "@lwahonen/ref-napi",
+  "name": "@openim/ref-napi",
   "description": "Turn Buffer instances into \"pointers\", with \"v8::ArrayBuffer::GetBackingStore\" patch",
   "engines": {
     "node": ">= 12.22.12"
@@ -21,17 +21,17 @@
     "64",
     "napi"
   ],
-  "version": "4.0.10",
+  "version": "4.0.11",
   "license": "MIT",
-  "author": "LWAhonen lwahonen@github",
+  "author": "bloomingg@github",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lwahonen/ref-napi.git"
+    "url": "git://github.com/bloomingg/ref-napi.git"
   },
   "main": "./lib/ref.js",
   "scripts": {
     "install": "node-gyp-build", 
-    "prebuild": "prebuildify -t 12.22.12 -t 13.14.0 -t 14.18.3 -t 14.20.1 -t 14.21.2 -t 15.14.0 -t 16.19.0 -t 17.9.1 -t 18.12.1 -t 19.3.0 --napi --tag-armv --tag-uv --tag-libc"
+    "prebuild": "prebuildify -t 12.22.12 -t 13.14.0 -t 14.18.3 -t 14.20.1 -t 14.21.2 -t 15.14.0 -t 16.19.0 -t 17.9.1 -t 18.12.1 -t 19.3.0 --napi --platform win32 --arch x64 --tag-uv"
   },
   "dependencies": {
     "debug": "^4.3.4",
